@@ -1,0 +1,85 @@
+replicaCount: 1
+
+image:
+  pullPolicy: Always
+
+imagePullSecrets:
+  - name: github-regcred
+
+nameOverride: ""
+fullnameOverride: "openissuer-site"
+
+serviceAccount:
+  create: false
+  annotations: {}
+  name:
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+istio:
+  enabled: false
+
+ingress:
+  enabled: false
+
+gateway:
+  enabled: true
+  hostnames:
+    - openissuer.com
+    - www.openissuer.com
+  parentRefs:
+    - name: tls-gateway
+      namespace: main
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+postgres:
+  enabled: false
+
+autoscaling:
+  enabled: false
+
+env: []
+
+secretFiles: []
+
+ports:
+  - name: http
+    containerPort: 3000
+    protocol: TCP
+
+livenessProbe:
+  enabled: true
+  httpGet:
+    path: /
+    port: 3000
+  initialDelaySeconds: 20
+  periodSeconds: 10
+  failureThreshold: 5
+
+readinessProbe:
+  enabled: true
+  httpGet:
+    path: /
+    port: 3000
+  initialDelaySeconds: 10
+  periodSeconds: 5
+  failureThreshold: 5
