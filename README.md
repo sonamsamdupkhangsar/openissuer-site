@@ -25,3 +25,11 @@ Open http://localhost:3000.
 The site is intended to run as a normal Next.js app behind Kubernetes Gateway API.
 
 Use `values-backend.yaml` with the shared Helm chart once the image is published.
+
+The GitHub workflow in `.github/workflows/build.yml` builds on every branch and pull request. On push events, it also publishes:
+
+```text
+ghcr.io/<owner>/openissuer-site:latest
+```
+
+The workflow does not deploy to Kubernetes.
