@@ -6,9 +6,9 @@ const capabilities = [
   'OAuth2 and OpenID Connect authorization flows',
   'Host-based tenant issuer resolution',
   'Business issuer and OAuth client management',
-  'Passkey MFA built into the sign-in flow',
+  'Organization and subdomain admin scopes',
   'User, role, organization, and default-tenant management',
-  'Kubernetes-ready services with tenant-aware routing'
+  'NextAuth demo clients for real tenant sign-in'
 ]
 
 const tenantSteps = [
@@ -41,10 +41,11 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>OAuth2 · OIDC · Passkeys · Multi-tenancy</p>
-            <h1>A tenant-aware authorization server for modern apps.</h1>
+            <h1>Give every tenant its own issuer URL.</h1>
             <p className={styles.heroText}>
-              OpenIssuer gives each business its own issuer host while keeping client
-              management, users, roles, and passkey MFA in one focused platform.
+              OpenIssuer is a multi-tenant OAuth2 and OpenID Connect platform for apps
+              that need tenant-scoped issuers, OAuth clients, users, roles, and admin
+              workflows without building identity infrastructure from scratch.
             </p>
             <div className={styles.actions}>
               <Link href="/demo" className={styles.primaryAction}>Try the demo</Link>
@@ -70,8 +71,8 @@ export default function Home() {
               </div>
               <div className={styles.flowArrow}>→</div>
               <div className={styles.flowRow}>
-                <strong>Passkey MFA</strong>
-                <span>Step-up security</span>
+                <strong>OrgAdmin</strong>
+                <span>Scoped access</span>
               </div>
               <div className={styles.tokenPreview}>
                 <code>{'{ "tenant_id": "free.openissuer.com", "scope": ["openid", "profile"] }'}</code>
@@ -98,11 +99,10 @@ export default function Home() {
         <section className={styles.splitSection}>
           <div>
             <p className={styles.eyebrow}>For small businesses</p>
-            <h2>Launch a business issuer without building identity from scratch.</h2>
+            <h2>Launch tenant-specific sign-in without rebuilding OAuth.</h2>
             <p>
-              A business can create an issuer, add users, create OAuth clients, and
-              connect apps through standard OIDC flows while keeping tokens scoped to
-              that business host.
+              Each tenant can use its own issuer host, admin portal, OAuth clients, and
+              organization membership while OpenIssuer keeps the platform services shared.
             </p>
           </div>
           <ol className={styles.stepList}>
@@ -117,9 +117,9 @@ export default function Home() {
             <p className={styles.eyebrow}>Platform</p>
             <h2>Designed as a working authorization system.</h2>
             <p>
-              The project uses Spring Boot 4, Spring Security, PostgreSQL, Kubernetes
-              Gateway API, and tenant-aware service routing to support real deployment
-              and testing.
+              The project uses Spring Boot, Spring Security, PostgreSQL, Kubernetes
+              Gateway API, and tenant-aware service routing. The public demo signs in
+              through live NextAuth clients for free and business tenants.
             </p>
           </div>
           <div className={styles.linkGrid}>

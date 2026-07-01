@@ -33,3 +33,34 @@ ghcr.io/<owner>/openissuer-site:latest
 ```
 
 The workflow does not deploy to Kubernetes.
+
+## Deploy to Kubernetes
+
+Run these commands from this repository after the GitHub build has published the image.
+
+```bash
+export KUBECONFIG=/Users/sonamsamdupkhangsar/Documents/github/do-k8-terraform-1/utils/kubeconfig_tutorial-1.yaml
+
+helm repo add sonam https://sonamsamdupkhangsar.github.io/sonam-helm-chart/
+helm repo update
+
+helm upgrade --install openissuer-site sonam/mychart \
+  -f values-backend.yaml \
+  --set image.repository=ghcr.io/sonamsamdupkhangsar/openissuer-site \
+  --set image.tag=latest \
+  --version 0.1.28 \
+  --namespace main
+```
+
+Check the deployment:
+
+```bash
+kubectl get pods -n main | grep openissuer-site
+kubectl get httproute -n main | grep openissuer-site
+```
+
+Then open:
+
+```text
+https://openissuer.com
+```

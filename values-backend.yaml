@@ -18,6 +18,9 @@ podSecurityContext: {}
 
 securityContext: {}
 
+rbac:
+  create: false
+
 service:
   type: ClusterIP
   port: 80
@@ -29,19 +32,19 @@ istio:
 ingress:
   enabled: false
 
-gateway:
-  enabled: true
-  hostnames:
-    - openissuer.com
-    - www.openissuer.com
-  parentRefs:
-    - name: tls-gateway
-      namespace: main
-  rules:
-    - matches:
-        - path:
-            type: PathPrefix
-            value: /
+httproute:
+  gatewayName: shared-tls-gateway
+  namespace: main
+  pathPrefix: /
+  hostRoutes:
+    - name: openissuer
+      hostname: openissuer.com
+      httpsListenerName: https-openissuer
+      httpListenerName: http-openissuer
+    - name: openissuer-www
+      hostname: www.openissuer.com
+      httpsListenerName: https-openissuer-www
+      httpListenerName: http-openissuer-www
 
 resources: {}
 
@@ -52,34 +55,26 @@ tolerations: []
 affinity: {}
 
 postgres:
-  enabled: false
 
 autoscaling:
   enabled: false
 
-env: []
+envs: []
+
+secretenvs: []
 
 secretFiles: []
 
-ports:
-  - name: http
-    containerPort: 3000
-    protocol: TCP
-
-livenessProbe:
-  enabled: true
-  httpGet:
+health:
+  liveness:
     path: /
     port: 3000
-  initialDelaySeconds: 20
-  periodSeconds: 10
-  failureThreshold: 5
-
-readinessProbe:
-  enabled: true
-  httpGet:
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    failureThreshold: 5
+  readiness:
     path: /
     port: 3000
-  initialDelaySeconds: 10
-  periodSeconds: 5
-  failureThreshold: 5
+    initialDelaySeconds: 10
+    periodSeconds: 5
+    failureThreshold: 5
