@@ -403,6 +403,369 @@
   margin-top: 20px;
 }
 
+.roleTable {
+  display: grid;
+  margin-top: 20px;
+  border: 1px solid #d8ded8;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fffef9;
+}
+
+.roleTable > div {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.7fr) minmax(150px, 0.9fr) minmax(260px, 1.8fr);
+}
+
+.roleTable > div + div {
+  border-top: 1px solid #d8ded8;
+}
+
+.roleTable span,
+.roleTable strong {
+  padding: 14px;
+  line-height: 1.45;
+}
+
+.roleTableHeader {
+  background: #13211d;
+  color: #fff;
+  font-weight: 800;
+}
+
+.serviceTable {
+  display: grid;
+  margin-top: 20px;
+  border: 1px solid #d8ded8;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fffef9;
+}
+
+.serviceTable > div {
+  display: grid;
+  grid-template-columns: minmax(230px, 1.4fr) minmax(80px, 0.4fr) minmax(210px, 1.2fr);
+}
+
+.serviceTable > div + div {
+  border-top: 1px solid #d8ded8;
+}
+
+.serviceTable span,
+.serviceTable strong,
+.serviceTable code {
+  padding: 12px 14px;
+  line-height: 1.45;
+}
+
+.serviceTableHeader {
+  background: #13211d;
+  color: #fff;
+  font-weight: 800;
+}
+
+.guideNote {
+  margin-top: 18px !important;
+}
+
+.calloutInline {
+  display: grid;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 16px;
+  border-left: 4px solid #2d6a4f;
+  background: #fffef9;
+}
+
+.calloutInline code {
+  overflow-wrap: anywhere;
+  color: #16362a;
+}
+
+.commandBlock {
+  margin: 18px 0 0;
+  padding: 18px;
+  overflow-x: auto;
+  border: 1px solid #31413c;
+  border-radius: 6px;
+  background: #121917;
+  color: #cce8d5;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.commandBlock code {
+  font: inherit;
+  color: #cce8d5;
+}
+
+.warningBlock {
+  margin-top: 18px;
+  padding: 16px;
+  border-left: 4px solid #a33b2b;
+  background: #fff5f2;
+  color: #57251d;
+  line-height: 1.6;
+}
+
+.sourceActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.sourceGroup {
+  padding: 52px 0;
+  border-bottom: 1px solid #d8ded8;
+}
+
+.sourceGroupIntro {
+  max-width: 720px;
+}
+
+.sourceGroupIntro h2 {
+  font-size: 1.8rem;
+}
+
+.sourceGroupIntro p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+}
+
+.repositoryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.repositoryItem {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid #d8ded8;
+  border-radius: 8px;
+  background: #fffef9;
+}
+
+.repositoryItem strong {
+  color: #143a2a;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+
+.repositoryItem span {
+  margin-top: 10px;
+  color: #43514c;
+  line-height: 1.55;
+}
+
+.repositoryItem small {
+  margin-top: auto;
+  padding-top: 18px;
+  color: #2d6a4f;
+  font-weight: 800;
+}
+
+.flowSection {
+  padding: 64px 0;
+  border-bottom: 1px solid #d8ded8;
+}
+
+.flowSection > h2 {
+  max-width: 780px;
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+}
+
+.flowSection > p:not(.eyebrow) {
+  max-width: 780px;
+  margin: 16px 0 0;
+  font-size: 1rem;
+}
+
+.flowTrack {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.flowStep {
+  position: relative;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  border: 1px solid #d8ded8;
+  border-radius: 8px;
+  background: #fffef9;
+}
+
+.flowStep:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 32px;
+  right: -11px;
+  width: 11px;
+  border-top: 2px solid #65a57d;
+  z-index: 1;
+}
+
+.flowNumber {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #13211d;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.flowStep strong {
+  margin-top: 18px;
+  color: #143a2a;
+  line-height: 1.35;
+}
+
+.flowStep > span:last-child {
+  margin-top: 10px;
+  color: #56645f;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.repositoryLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.repositoryLinks a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid #c7d1cb;
+  border-radius: 5px;
+  color: #24543f;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.calloutLinks {
+  margin-top: 18px;
+}
+
+.calloutLinks a {
+  color: #24543f;
+  font-weight: 800;
+}
+
+.apiSection {
+  padding: 60px 0;
+  border-bottom: 1px solid #d8ded8;
+}
+
+.apiSection > h2 {
+  max-width: 780px;
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+}
+
+.apiSection > p:not(.eyebrow) {
+  max-width: 800px;
+  font-size: 1rem;
+}
+
+.apiTable {
+  display: grid;
+  margin-top: 24px;
+  border: 1px solid #d8ded8;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fffef9;
+}
+
+.apiTable > div {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.55fr) minmax(220px, 1fr) minmax(280px, 1.7fr);
+}
+
+.apiTable > div + div {
+  border-top: 1px solid #d8ded8;
+}
+
+.apiTable span,
+.apiTable strong,
+.apiTable code {
+  padding: 14px;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.apiTableHeader {
+  background: #13211d;
+  color: #fff;
+  font-weight: 800;
+}
+
+.securityTableHeader,
+.securityTableRow {
+  grid-template-columns: minmax(180px, 0.7fr) minmax(320px, 2fr) !important;
+}
+
+.securityTableHeader {
+  background: #13211d;
+  color: #fff;
+  font-weight: 800;
+}
+
+.claimGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.claimGrid h3 {
+  margin: 0;
+  color: #17211e;
+}
+
+.claimGrid .commandBlock {
+  height: calc(100% - 30px);
+}
+
+.troubleshootingList {
+  display: grid;
+  gap: 0;
+  margin: 18px 0 0;
+}
+
+.troubleshootingList div {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.7fr);
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid #d8ded8;
+}
+
+.troubleshootingList dt {
+  font-weight: 800;
+  color: #111817;
+}
+
+.troubleshootingList dd {
+  margin: 0;
+  color: #43514c;
+  line-height: 1.55;
+}
+
 @media (max-width: 860px) {
   .nav {
     min-height: 66px;
@@ -435,6 +798,61 @@
   .diagram {
     grid-template-columns: 1fr;
   }
+
+  .roleTable > div,
+  .serviceTable > div,
+  .troubleshootingList div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .repositoryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .flowTrack {
+    grid-template-columns: 1fr;
+  }
+
+  .apiTable > div,
+  .claimGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .securityTableRow {
+    grid-template-columns: 1fr !important;
+  }
+
+  .securityTableHeader {
+    display: none !important;
+  }
+
+  .apiTableHeader {
+    display: none !important;
+  }
+
+  .flowStep {
+    min-height: 0;
+  }
+
+  .flowStep:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: -11px;
+    left: 32px;
+    width: 0;
+    height: 11px;
+    border-top: 0;
+    border-left: 2px solid #65a57d;
+  }
+
+  .roleTableHeader {
+    display: none !important;
+  }
+
+  .serviceTableHeader {
+    display: none !important;
+  }
 }
 
 @media (max-width: 560px) {
@@ -446,6 +864,10 @@
     padding: 14px 0;
   }
 
+  .navLinks {
+    flex-wrap: wrap;
+  }
+
   .hero,
   .section,
   .splitSection,
@@ -454,6 +876,10 @@
   }
 
   .actions {
+    flex-direction: column;
+  }
+
+  .sourceActions {
     flex-direction: column;
   }
 }

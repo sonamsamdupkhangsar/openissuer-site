@@ -14,6 +14,8 @@ export default function Architecture() {
           <div className={styles.navLinks}>
             <Link href="/architecture">Architecture</Link>
             <Link href="/demo">Demo</Link>
+            <Link href="/admin-guide">Admin guide</Link>
+            <Link href="/operations-guide">Operations</Link>
             <Link href="/docs">Docs</Link>
           </div>
         </nav>
@@ -43,6 +45,11 @@ export default function Architecture() {
               <h2>Passkey MFA</h2>
               <p>Users can enroll passkeys and complete MFA during the authorization flow.</p>
             </article>
+          </div>
+          <div className={styles.linkGrid}>
+            <Link href="/request-flows">Trace architecture request flows</Link>
+            <Link href="/source-repositories">Browse the source repositories</Link>
+            <Link href="/operations-guide">Read the Kubernetes operations guide</Link>
           </div>
         </section>
       </main>

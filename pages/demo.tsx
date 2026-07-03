@@ -31,6 +31,8 @@ export default function Demo() {
           <div className={styles.navLinks}>
             <Link href="/architecture">Architecture</Link>
             <Link href="/demo">Demo</Link>
+            <Link href="/admin-guide">Admin guide</Link>
+            <Link href="/operations-guide">Operations</Link>
             <Link href="/docs">Docs</Link>
           </div>
         </nav>

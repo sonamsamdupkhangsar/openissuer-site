@@ -34,6 +34,8 @@ export default function Home() {
           <div className={styles.navLinks}>
             <Link href="/architecture">Architecture</Link>
             <Link href="/demo">Demo</Link>
+            <Link href="/admin-guide">Admin guide</Link>
+            <Link href="/operations-guide">Operations</Link>
             <Link href="/docs">Docs</Link>
           </div>
         </nav>
@@ -124,7 +126,14 @@ export default function Home() {
           </div>
           <div className={styles.linkGrid}>
             <Link href="/architecture">Architecture overview</Link>
+            <Link href="/request-flows">Architecture request flows</Link>
+            <Link href="/api-reference">OAuth2 and OIDC API reference</Link>
+            <Link href="/security">Security and trust guide</Link>
             <Link href="/demo">Live demo clients</Link>
+            <Link href="/admin-guide">Tenant administration guide</Link>
+            <Link href="/local-development">Local development guide</Link>
+            <Link href="/operations-guide">Kubernetes operations guide</Link>
+            <Link href="/source-repositories">Source repositories</Link>
             <Link href="/docs">Project documentation</Link>
           </div>
         </section>
