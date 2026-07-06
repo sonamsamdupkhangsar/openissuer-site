@@ -12,7 +12,8 @@ const clientSteps = [
 
 const userSteps = [
   'Open an organization to view users who belong to that organization.',
-  'Use the subdomain user view to work across organizations only as a SubdomainAdmin.',
+  'A SubdomainAdmin can open, rename, and manage users for organizations in the assigned subdomain.',
+  'Search for an existing user to add, remove, or change their default organization.',
   'Confirm the user has a default organization that belongs to the current tenant host.',
   'Assign application roles independently from administrative scope assignments.',
 ]
@@ -64,7 +65,7 @@ export default function AdminGuide() {
               <div role="row">
                 <strong role="cell">SubdomainAdmin</strong>
                 <span role="cell">One tenant subdomain</span>
-                <span role="cell">Organizations and users across that subdomain.</span>
+                <span role="cell">View and edit organizations and manage their users across that subdomain.</span>
               </div>
             </div>
             <p className={styles.guideNote}>
@@ -91,6 +92,24 @@ export default function AdminGuide() {
             <ol className={styles.stepList}>
               {userSteps.map((step) => <li key={step}>{step}</li>)}
             </ol>
+            <p className={styles.guideNote}>
+              SubdomainAdmin access does not make the administrator a member of every
+              organization. A user must belong to an organization before it can become
+              their default. Operations outside the assigned subdomain are rejected.
+            </p>
+          </section>
+
+          <section className={styles.docsSection}>
+            <h2>Delegate subdomain administration</h2>
+            <p>
+              Open <strong>Subdomain</strong>, then <strong>Users</strong>. Eligible
+              users can be assigned or removed with the SubdomainAdmin action in the
+              user table.
+            </p>
+            <p className={styles.guideNote}>
+              The user must have a default organization in this subdomain and be
+              OrgAdmin for it. The final SubdomainAdmin cannot be removed.
+            </p>
           </section>
 
           <section className={styles.docsSection}>
@@ -135,6 +154,7 @@ export default function AdminGuide() {
           </section>
 
           <div className={styles.linkGrid}>
+            <Link href="/authorization-roles">Read the scoped authorization model</Link>
             <Link href="/demo">Test a live tenant</Link>
             <Link href="/operations-guide">Operate the Kubernetes deployment</Link>
             <Link href="/docs">Continue to developer documentation</Link>
