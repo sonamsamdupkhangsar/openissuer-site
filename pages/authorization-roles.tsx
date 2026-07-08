@@ -95,13 +95,15 @@ export default function AuthorizationRoles() {
               </div>
               <div role="row">
                 <strong role="cell">Role management</strong>
-                <span role="cell">Organization-scoped role management.</span>
-                <span role="cell">Subdomain-wide role management is not yet enabled.</span>
+                <span role="cell">Create, edit, and delete roles in the assigned organization.</span>
+                <span role="cell">Create, edit, and delete roles from an organization&apos;s Roles tab within the assigned subdomain.</span>
               </div>
             </div>
             <p className={styles.guideNote}>
               Every SubdomainAdmin operation verifies that the target organization
               belongs to the current subdomain. Cross-subdomain access is rejected.
+              Roles are bound to their organization when created; there is no separate
+              role-to-organization assignment step.
             </p>
           </section>
 

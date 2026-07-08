@@ -11,11 +11,11 @@ const clientSteps = [
 ]
 
 const userSteps = [
-  'Open an organization to view users who belong to that organization.',
+  'Open Organizations and select an organization to view its Details, Roles, and Users tabs.',
   'A SubdomainAdmin can open, rename, and manage users for organizations in the assigned subdomain.',
   'Search for an existing user to add, remove, or change their default organization.',
-  'Confirm the user has a default organization that belongs to the current tenant host.',
-  'Assign application roles independently from administrative scope assignments.',
+  'A user must belong to the selected organization before it can become their default organization.',
+  'Use the organization Roles tab to create, rename, or delete roles for that organization.',
 ]
 
 export default function AdminGuide() {
@@ -65,7 +65,7 @@ export default function AdminGuide() {
               <div role="row">
                 <strong role="cell">SubdomainAdmin</strong>
                 <span role="cell">One tenant subdomain</span>
-                <span role="cell">View and edit organizations and manage their users across that subdomain.</span>
+                <span role="cell">View and edit organizations and manage their users and roles across that subdomain.</span>
               </div>
             </div>
             <p className={styles.guideNote}>
@@ -96,6 +96,20 @@ export default function AdminGuide() {
               SubdomainAdmin access does not make the administrator a member of every
               organization. A user must belong to an organization before it can become
               their default. Operations outside the assigned subdomain are rejected.
+            </p>
+          </section>
+
+          <section className={styles.docsSection}>
+            <h2>Manage organization roles</h2>
+            <p>
+              Select an organization, then open <strong>Roles</strong>. An OrgAdmin for
+              that organization or a SubdomainAdmin for its subdomain can create,
+              rename, and delete its roles.
+            </p>
+            <p className={styles.guideNote}>
+              A role is bound to the selected organization when it is created. There
+              is no separate role-to-organization assignment step. The organization
+              in the URL is authoritative, and cross-subdomain access is rejected.
             </p>
           </section>
 
@@ -140,7 +154,11 @@ export default function AdminGuide() {
               </div>
               <div>
                 <dt>User cannot open an organization</dt>
-                <dd>Verify the OrgAdmin assignment is scoped to that organization.</dd>
+                <dd>Verify the user is OrgAdmin for it or SubdomainAdmin for the subdomain that contains it.</dd>
+              </div>
+              <div>
+                <dt>Organization belongs to another subdomain</dt>
+                <dd>Use an organization mapped to the current admin host. Cross-subdomain administration is denied.</dd>
               </div>
               <div>
                 <dt>Subdomain menu is missing</dt>
