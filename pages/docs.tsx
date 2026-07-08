@@ -107,6 +107,7 @@ export default function Docs() {
               organizations, roles, and default organization access.
             </p>
             <div className={styles.linkGrid}>
+              <Link href="/authorization-roles">Understand scoped authorization roles</Link>
               <a href="https://free.admin.openissuer.com">Free admin portal</a>
               <a href="https://business1.admin.openissuer.com">Business1 admin portal</a>
               <Link href="/admin-guide">Read the administration guide</Link>
