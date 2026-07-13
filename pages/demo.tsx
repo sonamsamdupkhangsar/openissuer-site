@@ -13,6 +13,9 @@ const demos = [
   },
 ]
 
+const demoVideoUrl = 'https://youtu.be/3kFLuzOdSR8'
+const demoVideoEmbedUrl = 'https://www.youtube.com/embed/3kFLuzOdSR8'
+
 export default function Demo() {
   return (
     <>
@@ -38,6 +41,25 @@ export default function Demo() {
             code flow with PKCE through NextAuth. The demo tenant has its own issuer,
             admin portal, client registration, callback URL, and token issuer claim.
           </p>
+
+          <section className={styles.videoSection} aria-labelledby="demo-video">
+            <h2 id="demo-video">Watch the demo walkthrough</h2>
+            <p>
+              This video shows the demo page, tenant admin portal, OAuth client setup,
+              and the NextAuth app signing in through OpenIssuer.
+            </p>
+            <div className={styles.videoFrame}>
+              <iframe
+                src={demoVideoEmbedUrl}
+                title="OpenIssuer demo walkthrough"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+            <div className={styles.calloutLinks}>
+              <a href={demoVideoUrl}>Open the demo video on YouTube</a>
+            </div>
+          </section>
 
           <div className={styles.demoGrid}>
             {demos.map((demo) => (
