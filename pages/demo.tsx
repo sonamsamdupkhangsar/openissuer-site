@@ -7,6 +7,7 @@ const demos = [
     name: 'Demo tenant',
     description: 'A public demo tenant using its own issuer host and NextAuth client.',
     appUrl: 'https://demo.openissuer.com/nextauth',
+    adminUrl: 'https://demo.admin.openissuer.com',
     issuer: 'https://demo.openissuer.com/issuer',
     callback: 'https://demo.openissuer.com/nextauth/api/auth/callback/myauth',
   },
@@ -35,7 +36,7 @@ export default function Demo() {
           <p>
             The demo uses a live tenant issuer URL and the standard OIDC authorization
             code flow with PKCE through NextAuth. The demo tenant has its own issuer,
-            client registration, callback URL, and token issuer claim.
+            admin portal, client registration, callback URL, and token issuer claim.
           </p>
 
           <div className={styles.demoGrid}>
@@ -47,6 +48,10 @@ export default function Demo() {
                   <div>
                     <dt>App</dt>
                     <dd><a href={demo.appUrl}>{demo.appUrl}</a></dd>
+                  </div>
+                  <div>
+                    <dt>Admin portal</dt>
+                    <dd><a href={demo.adminUrl}>{demo.adminUrl}</a></dd>
                   </div>
                   <div>
                     <dt>Issuer</dt>
