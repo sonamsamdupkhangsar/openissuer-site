@@ -4,18 +4,11 @@ import styles from '../styles/site.module.css'
 
 const demos = [
   {
-    name: 'Free tenant',
-    description: 'A public free-tier tenant using its own issuer host and NextAuth client.',
-    appUrl: 'https://free.openissuer.com/nextauth',
-    issuer: 'https://free.openissuer.com/issuer',
-    callback: 'https://free.openissuer.com/nextauth/api/auth/callback/myauth',
-  },
-  {
-    name: 'Business1 tenant',
-    description: 'A business tenant with the same OIDC flow isolated to the business issuer.',
-    appUrl: 'https://business1.openissuer.com/nextauth',
-    issuer: 'https://business1.openissuer.com/issuer',
-    callback: 'https://business1.openissuer.com/nextauth/api/auth/callback/myauth',
+    name: 'Demo tenant',
+    description: 'A public demo tenant using its own issuer host and NextAuth client.',
+    appUrl: 'https://demo.openissuer.com/nextauth',
+    issuer: 'https://demo.openissuer.com/issuer',
+    callback: 'https://demo.openissuer.com/nextauth/api/auth/callback/myauth',
   },
 ]
 
@@ -38,11 +31,11 @@ export default function Demo() {
         </nav>
         <section className={styles.contentPage}>
           <p className={styles.eyebrow}>Demo</p>
-          <h1>Try OpenIssuer with real NextAuth clients.</h1>
+          <h1>Try OpenIssuer with the demo NextAuth client.</h1>
           <p>
-            These demos use live tenant issuer URLs and standard OIDC authorization code
-            flow with PKCE through NextAuth. Each tenant has its own issuer, client
-            registration, callback URL, and token issuer claim.
+            The demo uses a live tenant issuer URL and the standard OIDC authorization
+            code flow with PKCE through NextAuth. The demo tenant has its own issuer,
+            client registration, callback URL, and token issuer claim.
           </p>
 
           <div className={styles.demoGrid}>
@@ -71,9 +64,9 @@ export default function Demo() {
           <div className={styles.callout}>
             <h2>What to check after sign-in</h2>
             <p>
-              Open the session view in the demo client and compare the issuer and tenant
-              values. The free and business1 apps use the same client application code,
-              but OpenIssuer resolves each authorization request from the tenant host.
+              Open the session view in the demo client and check the issuer and tenant
+              values. OpenIssuer resolves the authorization request from the demo tenant
+              host.
             </p>
           </div>
         </section>

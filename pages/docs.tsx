@@ -56,18 +56,18 @@ export default function Docs() {
 
           <div className={styles.detailGrid}>
             <article>
-              <h2>Free tenant</h2>
-              <p>Issuer URL for public free-tier demos and OAuth clients.</p>
-              <code>https://free.openissuer.com/issuer</code>
+              <h2>Demo tenant</h2>
+              <p>Issuer URL for the public OpenIssuer demo and OAuth clients.</p>
+              <code>https://demo.openissuer.com/issuer</code>
             </article>
             <article>
-              <h2>Business1 tenant</h2>
-              <p>Issuer URL for the business1 demo tenant and its client registrations.</p>
-              <code>https://business1.openissuer.com/issuer</code>
+              <h2>Demo admin</h2>
+              <p>Admin portal for creating and inspecting demo OAuth clients.</p>
+              <code>https://demo.admin.openissuer.com</code>
             </article>
             <article>
               <h2>Scopes</h2>
-              <p>The demo clients request the standard OpenID Connect scopes.</p>
+              <p>The demo client requests the standard OpenID Connect scopes.</p>
               <code>openid profile</code>
             </article>
           </div>
@@ -93,7 +93,7 @@ export default function Docs() {
               ))}
             </ol>
             <div className={styles.linkGrid}>
-              <a href="https://free.openissuer.com/nextauth">Open the live Free demo</a>
+              <a href="https://demo.openissuer.com/nextauth">Open the live Demo client</a>
               <a href="https://github.com/sonamsamdupkhangsar/next-auth-example">
                 Read the complete quickstart
               </a>
