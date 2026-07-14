@@ -13,8 +13,8 @@ const demos = [
   },
 ]
 
-const demoVideoUrl = 'https://youtu.be/3kFLuzOdSR8'
-const demoVideoEmbedUrl = 'https://www.youtube.com/embed/3kFLuzOdSR8'
+const demoVideoUrl = 'https://youtu.be/gGxyLnDpPDI'
+const demoVideoEmbedUrl = 'https://www.youtube.com/embed/gGxyLnDpPDI'
 
 export default function Demo() {
   return (

@@ -94,7 +94,7 @@ export default function Docs() {
             </ol>
             <div className={styles.linkGrid}>
               <a href="https://demo.openissuer.com/nextauth">Open the live Demo client</a>
-              <a href="https://youtu.be/3kFLuzOdSR8">Watch the OpenIssuer demo video</a>
+              <a href="https://youtu.be/gGxyLnDpPDI">Watch the OpenIssuer demo video</a>
               <a href="https://github.com/sonamsamdupkhangsar/next-auth-example">
                 Read the complete quickstart
               </a>
@@ -110,7 +110,7 @@ export default function Docs() {
             <div className={styles.linkGrid}>
               <Link href="/authorization-roles">Understand scoped authorization roles</Link>
               <a href="https://demo.admin.openissuer.com">Open the demo admin portal</a>
-              <a href="https://youtu.be/3kFLuzOdSR8">Watch the admin portal walkthrough</a>
+              <a href="https://youtu.be/gGxyLnDpPDI">Watch the admin portal walkthrough</a>
               <Link href="/admin-guide">Read the administration guide</Link>
             </div>
           </section>
