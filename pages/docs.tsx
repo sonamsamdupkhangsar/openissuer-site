@@ -29,6 +29,7 @@ export default function Docs() {
           <div className={styles.navLinks}>
             <Link href="/architecture">Architecture</Link>
             <Link href="/demo">Demo</Link>
+            <Link href="/free">Free</Link>
             <Link href="/admin-guide">Admin guide</Link>
             <Link href="/operations-guide">Operations</Link>
             <Link href="/docs">Docs</Link>
