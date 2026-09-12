@@ -119,10 +119,29 @@ export default function Docs() {
           <section className={styles.docsSection}>
             <h2>Deployment model</h2>
             <p>
-              OpenIssuer is deployed as Spring services behind Kubernetes Gateway API
-              routes, with PostgreSQL databases and tenant-aware routing. Demo apps are
-              deployed as separate NextAuth releases for each tenant host.
+              OpenIssuer supports both a shared multi-tenant deployment and a dedicated
+              deployment for a business or entity. Both use standard host-based OAuth2 and
+              OIDC issuers; the difference is where application workloads and service
+              databases run.
             </p>
+            <div className={styles.detailGrid}>
+              <article>
+                <h2>Shared multi-tenant</h2>
+                <p>
+                  Use this model when tenants can share service capacity and a common
+                  release lifecycle. Tenant-specific issuer databases and policies preserve
+                  logical boundaries without duplicating the platform stack.
+                </p>
+              </article>
+              <article>
+                <h2>Dedicated deployment</h2>
+                <p>
+                  Use this model when a business needs independent rollouts, quotas,
+                  backups, network policies, or stronger namespace-level isolation. The
+                  tenant receives its own services and databases inside the Kubernetes cluster.
+                </p>
+              </article>
+            </div>
             <div className={styles.linkGrid}>
               <Link href="/local-development">Run OpenIssuer locally</Link>
               <Link href="/operations-guide">Read the Kubernetes operations guide</Link>
