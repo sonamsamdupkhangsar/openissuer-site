@@ -34,6 +34,7 @@ export default function Home() {
           <div className={styles.navLinks}>
             <Link href="/architecture">Architecture</Link>
             <Link href="/demo">Demo</Link>
+            <Link href="/free">Free</Link>
             <Link href="/admin-guide">Admin guide</Link>
             <Link href="/operations-guide">Operations</Link>
             <Link href="/docs">Docs</Link>
@@ -50,8 +51,8 @@ export default function Home() {
               workflows without building identity infrastructure from scratch.
             </p>
             <div className={styles.actions}>
-              <Link href="/demo" className={styles.primaryAction}>Try the demo</Link>
-              <Link href="/architecture" className={styles.secondaryAction}>Read the architecture</Link>
+              <Link href="/free" className={styles.primaryAction}>Try OpenIssuer free</Link>
+              <Link href="/demo" className={styles.secondaryAction}>Watch the demos</Link>
             </div>
           </div>
 
@@ -129,6 +130,7 @@ export default function Home() {
             <Link href="/request-flows">Architecture request flows</Link>
             <Link href="/api-reference">OAuth2 and OIDC API reference</Link>
             <Link href="/security">Security and trust guide</Link>
+            <Link href="/free">Free evaluation environment</Link>
             <Link href="/demo">Live demo clients</Link>
             <Link href="/admin-guide">Tenant administration guide</Link>
             <Link href="/local-development">Local development guide</Link>

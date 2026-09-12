@@ -16,6 +16,23 @@ const demos = [
 const demoVideoUrl = 'https://youtu.be/gGxyLnDpPDI'
 const demoVideoEmbedUrl = 'https://www.youtube.com/embed/gGxyLnDpPDI'
 
+const passkeyVideos = [
+  {
+    title: 'Register and sign in with a passkey',
+    description:
+      'See a user register a passkey with Touch ID, sign out, and return to OpenIssuer using passwordless passkey authentication.',
+    url: 'https://youtu.be/UylB9l_U-24',
+    embedUrl: 'https://www.youtube.com/embed/UylB9l_U-24',
+  },
+  {
+    title: 'Enforce passkey verification after password login',
+    description:
+      'See OpenIssuer require the registered passkey as an additional factor after the user verifies a username and password.',
+    url: 'https://youtu.be/aIyNOSRlNUk',
+    embedUrl: 'https://www.youtube.com/embed/aIyNOSRlNUk',
+  },
+]
+
 export default function Demo() {
   return (
     <>
@@ -28,6 +45,7 @@ export default function Demo() {
           <div className={styles.navLinks}>
             <Link href="/architecture">Architecture</Link>
             <Link href="/demo">Demo</Link>
+            <Link href="/free">Free</Link>
             <Link href="/admin-guide">Admin guide</Link>
             <Link href="/operations-guide">Operations</Link>
             <Link href="/docs">Docs</Link>
@@ -58,6 +76,32 @@ export default function Demo() {
             </div>
             <div className={styles.calloutLinks}>
               <a href={demoVideoUrl}>Open the demo video on YouTube</a>
+            </div>
+          </section>
+
+          <section className={styles.passkeyVideoSection} aria-labelledby="passkey-videos">
+            <p className={styles.eyebrow}>Passkeys</p>
+            <h2 id="passkey-videos">Watch passkey authentication in action</h2>
+            <p>
+              These demonstrations show passwordless passkey sign-in and passkey
+              verification enforced as an additional factor after password login.
+            </p>
+            <div className={styles.passkeyVideoGrid}>
+              {passkeyVideos.map((video) => (
+                <article className={styles.passkeyVideo} key={video.url}>
+                  <div className={styles.videoFrame}>
+                    <iframe
+                      src={video.embedUrl}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+                  <h3>{video.title}</h3>
+                  <p>{video.description}</p>
+                  <a href={video.url}>Watch on YouTube</a>
+                </article>
+              ))}
             </div>
           </section>
 
