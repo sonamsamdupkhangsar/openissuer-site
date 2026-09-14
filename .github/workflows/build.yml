@@ -34,3 +34,6 @@ jobs:
           context: .
           push: ${{ github.event_name == 'push' }}
           tags: ghcr.io/${{ github.repository }}:latest
+          build-args: |
+            NEXT_PUBLIC_PLAUSIBLE_DOMAIN=openissuer.com
+            NEXT_PUBLIC_PLAUSIBLE_SCRIPT_URL=https://plausible.io/js/script.js

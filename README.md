@@ -63,4 +63,19 @@ Then open:
 
 ```text
 https://openissuer.com
+
+## Optional privacy-friendly analytics
+
+The site supports Plausible-compatible analytics without enabling it by default.
+Because Next.js embeds public environment variables at build time, pass these
+Docker build arguments when building the image:
+
+```bash
+docker build \
+  --build-arg NEXT_PUBLIC_PLAUSIBLE_DOMAIN=openissuer.com \
+  --build-arg NEXT_PUBLIC_PLAUSIBLE_SCRIPT_URL=https://plausible.io/js/script.js \
+  -t ghcr.io/sonamsamdupkhangsar/openissuer-site:latest .
+```
+
+Leave `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` unset to deploy with no analytics script.
 ```
