@@ -79,3 +79,9 @@ docker build \
 
 Leave `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` unset to deploy with no analytics script.
 ```
+
+Cloudflare Web Analytics can be enabled for the published image by adding the
+snippet token as the repository Actions secret `CLOUDFLARE_ANALYTICS_TOKEN`.
+The build workflow passes it as `NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN`; the
+token is intended to be present in the browser beacon and is not a server
+credential.
