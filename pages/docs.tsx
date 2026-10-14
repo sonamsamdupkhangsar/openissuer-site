@@ -73,6 +73,79 @@ export default function Docs() {
             </article>
           </div>
 
+          <section className={styles.screenshotSection} aria-labelledby="tenant-request">
+            <p className={styles.eyebrow}>Dedicated tenants</p>
+            <h2 id="tenant-request">Request a new OpenIssuer tenant</h2>
+            <p>
+              An approved platform user can request an isolated OpenIssuer environment
+              from the tenant portal. The request is reviewed before infrastructure is
+              created, so submitting the form does not immediately deploy a tenant.
+            </p>
+
+            <ol className={styles.stepList}>
+              <li>
+                Create or activate your account at{' '}
+                <a href="https://platform.openissuer.com">platform.openissuer.com</a>.
+              </li>
+              <li>
+                Open <a href="https://tenant-portal.openissuer.com">tenant-portal.openissuer.com</a>{' '}
+                and sign in with that account.
+              </li>
+              <li>
+                Enter a friendly tenant name and a unique lowercase subdomain. The
+                subdomain becomes the tenant host, for example{' '}
+                <code>acme-demo.openissuer.com</code>.
+              </li>
+              <li>
+                Enter the seed administrator&apos;s first name, last name, and email
+                address. This user receives the activation email for the new tenant.
+              </li>
+              <li>
+                Select the deployment region and choose <strong>Request tenant</strong>.
+                The request history will show the current status.
+              </li>
+            </ol>
+
+            <div className={styles.screenshotGrid}>
+              <figure className={styles.screenshotStep}>
+                <img
+                  src="/docs/tenant-request-form.png"
+                  alt="Tenant portal request form with example tenant and seed administrator values"
+                  width="1832"
+                  height="858"
+                />
+                <figcaption>
+                  <strong>Submit the request</strong>
+                  Use a unique lowercase subdomain and an administrator email you control.
+                </figcaption>
+              </figure>
+              <figure className={styles.screenshotStep}>
+                <img
+                  src="/docs/tenant-approval-dashboard.png"
+                  alt="Tenant approvals dashboard grouped by requester with status and pagination controls"
+                  width="1436"
+                  height="1095"
+                />
+                <figcaption>
+                  <strong>Review and approve</strong>
+                  Platform administrators can expand a requester, inspect requests, and approve or cancel them.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div className={styles.callout}>
+              <h2>What the statuses mean</h2>
+              <p>
+                <strong>PENDING</strong> means the request was submitted.{' '}
+                <strong>VALIDATING</strong> means the provisioning workflow is checking
+                the generated configuration. <strong>PROVISIONING</strong> means the
+                infrastructure is being created. <strong>READY</strong> means the tenant
+                URLs are available. Failed or cancelled requests can be reviewed before
+                submitting a new request.
+              </p>
+            </div>
+          </section>
+
           <section className={styles.docsSection}>
             <h2>Integration flow</h2>
             <ol className={styles.stepList}>
