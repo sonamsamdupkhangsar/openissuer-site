@@ -81,9 +81,12 @@ export default function TenantProvisioning() {
                 <strong>Submit the request</strong>
                 Your request appears in request history after submission. For this example,
                 the generated admin URL is{' '}
-                <code>https://pr-test-20.admin.openissuer.com</code>.
+                <a href="https://pr-test-20.admin.openissuer.com">pr-test-20.admin.openissuer.com</a>.
               </figcaption>
             </figure>
+            <div className={styles.calloutLinks}>
+              <a href="https://pr-test-20.openissuer.com">Try the pr-test-20 tenant issuer</a>
+            </div>
           </section>
 
           <section className={styles.screenshotSection} aria-labelledby="admin-review">
