@@ -40,6 +40,7 @@ export default function ApiReference() {
             <Link href="/admin-guide">Admin guide</Link>
             <Link href="/operations-guide">Operations</Link>
             <Link href="/docs">Docs</Link>
+            <Link href="/tenant-provisioning">Request a tenant</Link>
           </div>
         </nav>
 

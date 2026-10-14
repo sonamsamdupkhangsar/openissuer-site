@@ -486,6 +486,16 @@
   line-height: 1.55;
 }
 
+.tenantRequestScreenshot {
+  display: block;
+  width: min(100%, 980px);
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #d8ded8;
+  border-radius: 8px;
+  box-shadow: 0 14px 36px rgb(35 48 44 / 10%);
+}
+
 .screenshotStep figcaption strong {
   display: block;
   color: #16362a;
