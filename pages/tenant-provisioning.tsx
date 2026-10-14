@@ -79,7 +79,32 @@ export default function TenantProvisioning() {
               />
               <figcaption>
                 <strong>Submit the request</strong>
-                Your request appears in request history after submission.
+                Your request appears in request history after submission. For this example,
+                the generated admin URL is{' '}
+                <code>https://pr-test-20.admin.openissuer.com</code>.
+              </figcaption>
+            </figure>
+          </section>
+
+          <section className={styles.screenshotSection} aria-labelledby="admin-review">
+            <p className={styles.eyebrow}>Platform administration</p>
+            <h2 id="admin-review">Review the request</h2>
+            <p>
+              A platform administrator reviews the request in the approvals view before
+              provisioning begins. The example below uses <code>pr-test-20</code>; seed
+              first and last names are redacted.
+            </p>
+            <figure className={styles.screenshotStep}>
+              <img
+                className={styles.tenantRequestScreenshot}
+                src="/docs/tenant-approval-dashboard.png"
+                alt="Sanitized tenant approvals view showing pr-test-20 with redacted seed names"
+                width="1436"
+                height="1095"
+              />
+              <figcaption>
+                <strong>Approve or cancel</strong>
+                Requests are grouped by requester, with status and pagination controls for review.
               </figcaption>
             </figure>
           </section>
