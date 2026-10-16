@@ -35,6 +35,25 @@ export default function TenantProvisioning() {
             created, so submitting the form does not immediately deploy a tenant.
           </p>
 
+          <section className={styles.docsSection} aria-labelledby="automation">
+            <p className={styles.eyebrow}>How it works</p>
+            <h2 id="automation">A protected provisioning workflow</h2>
+            <p>
+              OpenIssuer connects the tenant portal to a reviewable infrastructure
+              workflow. Approval produces a Terraform pull request; protected checks
+              validate the generated environment before the apply job creates the
+              namespace, PostgreSQL databases, gateway routes, secrets, and seed data.
+              The workflow then calls back with <strong>READY</strong>, so the issuer and
+              admin URLs are available without manually coordinating each deployment step.
+            </p>
+            <ol className={styles.stepList}>
+              <li>Submit the tenant form and track the request in the portal.</li>
+              <li>Approve the request from the platform administration view.</li>
+              <li>Review the generated Terraform plan and let protected automation apply it.</li>
+              <li>Use the issuer and admin URLs after the request reaches <strong>READY</strong>.</li>
+            </ol>
+          </section>
+
           <section className={styles.docsSection} aria-labelledby="request-steps">
             <h2 id="request-steps">Request steps</h2>
             <ol className={styles.stepList}>

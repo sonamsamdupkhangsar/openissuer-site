@@ -18,6 +18,13 @@ const tenantSteps = [
   'OpenIssuer returns tenant-scoped tokens and claims.'
 ]
 
+const provisioningSteps = [
+  'Submit a tenant request with its issuer, administrator, and region details.',
+  'Review and approve the generated Terraform change through the admin workflow.',
+  'Protected validation and apply jobs create the namespace, databases, routes, and secrets.',
+  'Status callbacks mark the tenant ready so the issuer and admin URLs can be used.'
+]
+
 export default function Home() {
   return (
     <>
@@ -111,6 +118,28 @@ export default function Home() {
           </div>
           <ol className={styles.stepList}>
             {tenantSteps.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        </section>
+
+        <section className={styles.splitSection}>
+          <div>
+            <p className={styles.eyebrow}>Automated tenant delivery</p>
+            <h2>From an approved request to a working issuer.</h2>
+            <p>
+              OpenIssuer turns tenant provisioning into an auditable workflow. Each
+              request becomes a reviewed Terraform change, then protected automation
+              creates the tenant infrastructure and reports its status back to the portal.
+            </p>
+            <div className={styles.actions}>
+              <Link href="/tenant-provisioning" className={styles.primaryAction}>
+                See dedicated tenant provisioning
+              </Link>
+            </div>
+          </div>
+          <ol className={styles.stepList}>
+            {provisioningSteps.map((step) => (
               <li key={step}>{step}</li>
             ))}
           </ol>
