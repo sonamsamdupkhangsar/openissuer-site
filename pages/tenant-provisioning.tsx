@@ -100,16 +100,16 @@ export default function TenantProvisioning() {
                 <strong>Submit the request</strong>
                 Your request appears in request history after submission. For this example,
                 the generated admin URL is{' '}
-                <a href="https://yak-one.admin.openissuer.com">yak-one.admin.openissuer.com</a>.
+                <a href="https://perro.admin.openissuer.com">perro.admin.openissuer.com</a>.
               </figcaption>
             </figure>
             <p className={styles.callout}>
-              <strong>Testing note:</strong> The <code>yak-one</code> issuer is a
+              <strong>Testing note:</strong> The <code>perro</code> issuer is a
               disposable test tenant. It may be unavailable while provisioning or
               retirement is being tested, and its hostname may change over time.
             </p>
             <div className={styles.calloutLinks}>
-              <a href="https://yak-one.openissuer.com">Try the yak-one tenant issuer (when available)</a>
+              <a href="https://perro.openissuer.com">Try the perro tenant issuer (when available)</a>
             </div>
           </section>
 
@@ -118,7 +118,7 @@ export default function TenantProvisioning() {
             <h2 id="admin-review">Review the request</h2>
             <p>
               A platform administrator reviews the request in the approvals view before
-              provisioning begins. The example below uses <code>yak-one</code>; seed
+              provisioning begins. The example below uses <code>perro</code>; seed
               first and last names are redacted.
             </p>
             <figure className={styles.screenshotStep}>

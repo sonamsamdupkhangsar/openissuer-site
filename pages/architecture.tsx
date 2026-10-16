@@ -4,7 +4,7 @@ import styles from '../styles/site.module.css'
 
 const dedicatedTenantConfigExample = `{
   "deploymentModel": "dedicated-namespace",
-  "namespace": "snowlion",
+  "namespace": "oso",
   "tenants": [
     {
       "name": "business1",
@@ -128,16 +128,16 @@ export default function Architecture() {
                 <h2>Dedicated namespace · complete stack</h2>
                 <p>
                   The dedicated tenant runs its own gateway-facing services and PostgreSQL
-                  databases in the <code>snowlion</code> namespace.
+                  databases in the <code>oso</code> namespace.
                 </p>
                 <p className={styles.callout}>
-                  This is a testing example. The Snowlion issuer and admin hostnames may
-                  be renamed, retired, or temporarily unavailable as the provisioning
+                  This is a testing example. The Oso issuer and admin hostnames may be
+                  renamed, retired, or temporarily unavailable as the provisioning
                   workflow is exercised.
                 </p>
                 <div className={styles.calloutLinks}>
-                  <a href="https://snowlion.openissuer.com/issuer/.well-known/openid-configuration">Snowlion issuer metadata</a>
-                  <a href="https://snowlion.admin.openissuer.com">Snowlion admin portal</a>
+                  <a href="https://oso.openissuer.com/issuer/.well-known/openid-configuration">Oso issuer metadata</a>
+                  <a href="https://oso.admin.openissuer.com">Oso admin portal</a>
                 </div>
               </article>
             </div>
