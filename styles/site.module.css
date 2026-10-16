@@ -27,13 +27,13 @@
 
 .hero {
   width: min(1120px, calc(100% - 40px));
-  min-height: calc(100vh - 72px);
+  min-height: auto;
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
   align-items: center;
   gap: 56px;
-  padding: 36px 0 80px;
+  padding: 84px 0 96px;
 }
 
 .heroCopy h1,
@@ -56,7 +56,7 @@
 
 .heroText {
   max-width: 650px;
-  margin: 28px 0 0;
+  margin: 16px 0 0;
 }
 
 .eyebrow {
