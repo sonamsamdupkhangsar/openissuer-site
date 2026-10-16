@@ -103,8 +103,13 @@ export default function TenantProvisioning() {
                 <a href="https://pr-test-20.admin.openissuer.com">pr-test-20.admin.openissuer.com</a>.
               </figcaption>
             </figure>
+            <p className={styles.callout}>
+              <strong>Testing note:</strong> The <code>pr-test-20</code> issuer is a
+              disposable test tenant. It may be unavailable while provisioning or
+              retirement is being tested, and its hostname may change over time.
+            </p>
             <div className={styles.calloutLinks}>
-              <a href="https://pr-test-20.openissuer.com">Try the pr-test-20 tenant issuer</a>
+              <a href="https://pr-test-20.openissuer.com">Try the pr-test-20 tenant issuer (when available)</a>
             </div>
           </section>
 

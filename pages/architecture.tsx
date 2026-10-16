@@ -130,6 +130,11 @@ export default function Architecture() {
                   The dedicated tenant runs its own gateway-facing services and PostgreSQL
                   databases in the <code>dedicated-tenant</code> namespace.
                 </p>
+                <p className={styles.callout}>
+                  This is a testing example. The dedicated tenant hostname and admin
+                  hostname may be renamed, retired, or temporarily unavailable as the
+                  provisioning workflow is exercised.
+                </p>
                 <div className={styles.calloutLinks}>
                   <a href="https://dedicated-tenant.openissuer.com/issuer/.well-known/openid-configuration">Dedicated issuer metadata</a>
                   <a href="https://dedicated-tenant.admin.openissuer.com">Dedicated admin portal</a>
