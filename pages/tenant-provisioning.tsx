@@ -100,16 +100,16 @@ export default function TenantProvisioning() {
                 <strong>Submit the request</strong>
                 Your request appears in request history after submission. For this example,
                 the generated admin URL is{' '}
-                <a href="https://pr-test-20.admin.openissuer.com">pr-test-20.admin.openissuer.com</a>.
+                <a href="https://yak-one.admin.openissuer.com">yak-one.admin.openissuer.com</a>.
               </figcaption>
             </figure>
             <p className={styles.callout}>
-              <strong>Testing note:</strong> The <code>pr-test-20</code> issuer is a
+              <strong>Testing note:</strong> The <code>yak-one</code> issuer is a
               disposable test tenant. It may be unavailable while provisioning or
               retirement is being tested, and its hostname may change over time.
             </p>
             <div className={styles.calloutLinks}>
-              <a href="https://pr-test-20.openissuer.com">Try the pr-test-20 tenant issuer (when available)</a>
+              <a href="https://yak-one.openissuer.com">Try the yak-one tenant issuer (when available)</a>
             </div>
           </section>
 
@@ -118,14 +118,14 @@ export default function TenantProvisioning() {
             <h2 id="admin-review">Review the request</h2>
             <p>
               A platform administrator reviews the request in the approvals view before
-              provisioning begins. The example below uses <code>pr-test-20</code>; seed
+              provisioning begins. The example below uses <code>yak-one</code>; seed
               first and last names are redacted.
             </p>
             <figure className={styles.screenshotStep}>
               <img
                 className={styles.tenantRequestScreenshot}
                 src="/docs/tenant-approval-dashboard.png"
-                alt="Sanitized tenant approvals view showing pr-test-20 with redacted seed names"
+                alt="Sanitized tenant approvals view showing a test tenant with redacted seed names"
                 width="1436"
                 height="1095"
               />
