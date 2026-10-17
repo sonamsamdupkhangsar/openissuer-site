@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styles from '../styles/site.module.css'
 
 const capabilities = [
+  'Tenant-aware Single Sign-On for connected applications',
   'OAuth2 and OpenID Connect authorization flows',
   'Host-based tenant issuer resolution',
   'Business issuer and OAuth client management',
@@ -51,12 +52,12 @@ export default function Home() {
 
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>OAuth2 · OIDC · Passkeys · Multi-tenancy</p>
-            <h1>Give every tenant its own issuer URL.</h1>
+            <p className={styles.eyebrow}>Single Sign-On · OAuth2 · OIDC · Multi-tenancy</p>
+            <h1>Single Sign-On for every tenant.</h1>
             <p className={styles.heroText}>
-              OpenIssuer is a multi-tenant OAuth2 and OpenID Connect platform for apps
-              that need tenant-scoped issuers, OAuth clients, users, roles, and admin
-              workflows without building identity infrastructure from scratch.
+              OpenIssuer gives connected applications a tenant-aware Single Sign-On
+              experience through OAuth2 and OpenID Connect, with tenant-scoped issuers,
+              OAuth clients, users, roles, and admin workflows ready to use.
             </p>
             <div className={styles.actions}>
               <Link href="/free" className={styles.primaryAction}>Try OpenIssuer free</Link>
@@ -105,6 +106,24 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section className={styles.splitSection}>
+          <div>
+            <p className={styles.eyebrow}>One login, connected apps</p>
+            <h2>Give users SSO without building an identity platform.</h2>
+            <p>
+              Register each application as an OIDC client under the right tenant issuer.
+              Users authenticate with OpenIssuer once, then move between connected apps
+              without signing in again while the tenant keeps its own users, policies, and claims.
+            </p>
+          </div>
+          <ol className={styles.stepList}>
+            <li>Users start at any connected application.</li>
+            <li>OpenIssuer authenticates them at the tenant issuer.</li>
+            <li>OIDC returns identity and authorization tokens to the app.</li>
+            <li>Other connected apps reuse the active SSO session.</li>
+          </ol>
         </section>
 
         <section className={styles.splitSection}>

@@ -56,6 +56,20 @@ export default function Docs() {
             </div>
           </div>
 
+          <section className={styles.docsSection}>
+            <h2>Tenant-aware Single Sign-On</h2>
+            <p>
+              OpenIssuer provides SSO through OpenID Connect. Register each application
+              as an OAuth client under the tenant issuer, and users can authenticate once
+              before accessing multiple connected applications. OAuth2 handles delegated
+              authorization; OIDC supplies the signed identity and session claims.
+            </p>
+            <div className={styles.calloutLinks}>
+              <Link href="/api-reference">See the authorization and token endpoints</Link>
+              <Link href="/demo">Try the connected demo clients</Link>
+            </div>
+          </section>
+
           <div className={styles.detailGrid}>
             <article>
               <h2>Demo tenant</h2>
