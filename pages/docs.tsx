@@ -70,6 +70,43 @@ export default function Docs() {
             </div>
           </section>
 
+          <section className={styles.docsSection}>
+            <h2>Live two-app SSO showcase</h2>
+            <p>
+              The Summit tenant currently backs two separate OAuth clients: OpenIssuer
+              Workspace and OpenIssuer Reports. Sign in to either app, then open the
+              other app. Summit reuses the existing issuer session, while each app still
+              creates and protects its own local NextAuth session.
+            </p>
+            <div className={styles.detailGrid}>
+              <article>
+                <h2>OpenIssuer Workspace</h2>
+                <p>OIDC client using the Summit tenant issuer.</p>
+                <a href="https://sso-workspace.openissuer.com/nextauth">
+                  Open Workspace
+                </a>
+              </article>
+              <article>
+                <h2>OpenIssuer Reports</h2>
+                <p>Separate OIDC client using the same Summit issuer session.</p>
+                <a href="https://sso-reports.openissuer.com/nextauth">
+                  Open Reports
+                </a>
+              </article>
+            </div>
+            <p className={styles.callout}>
+              This is SSO, not shared application credentials: each client has its own
+              redirect URI, secret, tokens, and app session. Signing out of one app does
+              not automatically erase the Summit issuer session or the other app's cookie.
+            </p>
+            <p>
+              The showcase depends on the <code>summit</code> issuer, not the separate
+              <code>northstar</code> dedicated namespace. Retiring Northstar should not
+              affect either SSO app; verify the shared TLS certificate after infrastructure
+              changes because it covers multiple tenant and application hostnames.
+            </p>
+          </section>
+
           <div className={styles.detailGrid}>
             <article>
               <h2>Demo tenant</h2>
