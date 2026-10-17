@@ -4,7 +4,7 @@ import styles from '../styles/site.module.css'
 
 const dedicatedTenantConfigExample = `{
   "deploymentModel": "dedicated-namespace",
-  "namespace": "oso",
+  "namespace": "northstar",
   "tenants": [
     {
       "name": "business1",
@@ -128,16 +128,16 @@ export default function Architecture() {
                 <h2>Dedicated namespace · complete stack</h2>
                 <p>
                   The dedicated tenant runs its own gateway-facing services and PostgreSQL
-                  databases in the <code>oso</code> namespace.
+                  databases in the <code>northstar</code> namespace.
                 </p>
                 <p className={styles.callout}>
-                  This is a testing example. The Oso issuer and admin hostnames may be
+                  This is a testing example. The Northstar issuer and admin hostnames may be
                   renamed, retired, or temporarily unavailable as the provisioning
                   workflow is exercised.
                 </p>
                 <div className={styles.calloutLinks}>
-                  <a href="https://oso.openissuer.com/issuer/.well-known/openid-configuration">Oso issuer metadata</a>
-                  <a href="https://oso.admin.openissuer.com">Oso admin portal</a>
+                  <a href="https://northstar.openissuer.com/issuer/.well-known/openid-configuration">Northstar issuer metadata</a>
+                  <a href="https://northstar.admin.openissuer.com">Northstar admin portal</a>
                 </div>
               </article>
             </div>
