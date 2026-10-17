@@ -94,6 +94,20 @@ export default function Docs() {
                 </a>
               </article>
             </div>
+            <h3>Try the Workspace → Reports flow</h3>
+            <ol className={styles.stepList}>
+              <li>
+                Open <a href="https://sso-workspace.openissuer.com/nextauth">Workspace</a>
+                and sign in with the Summit tenant.
+              </li>
+              <li>
+                Select <strong>OpenIssuer Reports</strong> from the active-session notice.
+              </li>
+              <li>
+                Reports redirects through Summit and returns signed in without asking for
+                credentials again.
+              </li>
+            </ol>
             <p className={styles.callout}>
               This is SSO, not shared application credentials: each client has its own
               redirect URI, secret, tokens, and app session. Signing out of one app does
