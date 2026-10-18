@@ -51,7 +51,7 @@ export default function Docs() {
               Register the callback URL that matches the app host, base path, and provider id.
             </p>
             <code>https://your-app.example.com/api/auth/callback/myauth</code>
-            <div className={styles.calloutLinks}>
+            <div className={`${styles.calloutLinks} ${styles.stackedLinks}`}>
               <Link href="/api-reference">Open the OAuth2 and OIDC API reference</Link>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function Docs() {
               before accessing multiple connected applications. OAuth2 handles delegated
               authorization; OIDC supplies the signed identity and session claims.
             </p>
-            <div className={styles.calloutLinks}>
+            <div className={`${styles.calloutLinks} ${styles.stackedLinks}`}>
               <Link href="/api-reference">See the authorization and token endpoints</Link>
               <Link href="/demo">Try the connected demo clients</Link>
               <Link href="/sso-demo">Watch the Workspace → Reports SSO demo</Link>

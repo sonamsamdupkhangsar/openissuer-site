@@ -864,6 +864,15 @@
   text-underline-offset: 3px;
 }
 
+.stackedLinks a {
+  display: block;
+  margin-top: 8px;
+}
+
+.stackedLinks a:first-child {
+  margin-top: 0;
+}
+
 .apiSection {
   padding: 60px 0;
   border-bottom: 1px solid #d8ded8;
