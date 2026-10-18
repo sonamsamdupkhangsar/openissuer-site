@@ -33,6 +33,22 @@ export default function SsoDemo() {
           </p>
 
           <div className={styles.callout}>
+            <iframe
+              width="100%"
+              height="420"
+              src="https://www.youtube.com/embed/gpkt4tGv4hQ"
+              title="OpenIssuer Single Sign-On demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              style={{ border: 0, borderRadius: '12px' }}
+            />
+            <p>
+              Prefer the local recording?{' '}
+              <a href="/videos/full-sso-demo.mov">Download the video</a>.
+            </p>
+          </div>
+
+          <div className={styles.callout}>
             <video controls playsInline preload="metadata" style={{ width: '100%', borderRadius: '12px' }}>
               <source src="/videos/full-sso-demo.mov" type="video/quicktime" />
               Your browser does not support embedded video.{' '}
