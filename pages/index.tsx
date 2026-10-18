@@ -63,6 +63,7 @@ export default function Home() {
             <div className={styles.actions}>
               <Link href="/free" className={styles.primaryAction}>Try OpenIssuer free</Link>
               <Link href="/demo" className={styles.secondaryAction}>Watch the demos</Link>
+              <Link href="/sso-demo" className={styles.secondaryAction}>Watch the SSO demo</Link>
             </div>
           </div>
 
