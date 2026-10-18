@@ -43,17 +43,8 @@ export default function SsoDemo() {
               style={{ border: 0, borderRadius: '12px' }}
             />
             <p>
-              Prefer the local recording?{' '}
-              <a href="/videos/full-sso-demo.mov">Download the video</a>.
+              Prefer a local copy? <a href="/videos/full-sso-demo.mov">Download the video</a>.
             </p>
-          </div>
-
-          <div className={styles.callout}>
-            <video controls playsInline preload="metadata" style={{ width: '100%', borderRadius: '12px' }}>
-              <source src="/videos/full-sso-demo.mov" type="video/quicktime" />
-              Your browser does not support embedded video.{' '}
-              <a href="/videos/full-sso-demo.mov">Download the SSO demo</a>.
-            </video>
           </div>
 
           <section className={styles.docsSection}>
