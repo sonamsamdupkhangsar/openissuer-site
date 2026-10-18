@@ -60,6 +60,9 @@ export default function Demo() {
             code flow with PKCE through NextAuth. The demo tenant has its own issuer,
             admin portal, client registration, callback URL, and token issuer claim.
           </p>
+          <div className={styles.calloutLinks}>
+            <Link href="/sso-demo">Watch the connected-app Single Sign-On demo</Link>
+          </div>
 
           <section className={styles.videoSection} aria-labelledby="demo-video">
             <h2 id="demo-video">Watch the demo walkthrough</h2>
