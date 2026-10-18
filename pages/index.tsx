@@ -58,6 +58,7 @@ export default function Home() {
               OpenIssuer gives connected applications a tenant-aware Single Sign-On
               experience through OAuth2 and OpenID Connect, with tenant-scoped issuers,
               OAuth clients, users, roles, and admin workflows ready to use.
+              {' '}<Link href="/sso-demo">Watch the live Single Sign-On demo.</Link>
             </p>
             <div className={styles.actions}>
               <Link href="/free" className={styles.primaryAction}>Try OpenIssuer free</Link>
