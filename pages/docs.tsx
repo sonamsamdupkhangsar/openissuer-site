@@ -67,6 +67,10 @@ export default function Docs() {
             <div className={styles.calloutLinks}>
               <Link href="/api-reference">See the authorization and token endpoints</Link>
               <Link href="/demo">Try the connected demo clients</Link>
+              <Link href="/sso-demo">Watch the Workspace → Reports SSO demo</Link>
+              <a href="https://youtu.be/gpkt4tGv4hQ" target="_blank" rel="noreferrer">
+                Watch the SSO recording on YouTube
+              </a>
             </div>
           </section>
 
