@@ -40,7 +40,7 @@ export default function SsoDemo() {
             <iframe
               width="100%"
               height="420"
-              src="https://www.youtube.com/embed/0RveSgy5CPI"
+              src="https://www.youtube.com/embed/0fywnTg4bn4"
               title="OpenIssuer Single Sign-On demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
@@ -62,7 +62,7 @@ export default function SsoDemo() {
             <div className={styles.calloutLinks}>
               <a href="https://sso-workspace.openissuer.com/nextauth">Open Workspace</a>
               <a href="https://sso-reports.openissuer.com/nextauth">Open Reports</a>
-              <a href="https://youtu.be/0RveSgy5CPI" target="_blank" rel="noreferrer">
+              <a href="https://youtu.be/0fywnTg4bn4" target="_blank" rel="noreferrer">
                 Watch the demo on YouTube
               </a>
               <Link href="/docs">Read the SSO documentation</Link>

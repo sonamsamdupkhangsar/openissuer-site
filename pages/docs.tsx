@@ -68,7 +68,7 @@ export default function Docs() {
               <Link href="/api-reference">See the authorization and token endpoints</Link>
               <Link href="/demo">Try the connected demo clients</Link>
               <Link href="/sso-demo">Watch the Workspace → Reports SSO demo</Link>
-              <a href="https://youtu.be/0RveSgy5CPI" target="_blank" rel="noreferrer">
+              <a href="https://youtu.be/0fywnTg4bn4" target="_blank" rel="noreferrer">
                 Watch the SSO recording on YouTube
               </a>
             </div>
