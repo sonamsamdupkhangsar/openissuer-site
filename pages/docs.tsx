@@ -118,10 +118,10 @@ export default function Docs() {
               not automatically erase the Summit issuer session or the other app's cookie.
             </p>
             <p>
-              The showcase depends on the <code>summit</code> issuer, not the separate
-              <code>northstar</code> dedicated namespace. Retiring Northstar should not
-              affect either SSO app; verify the shared TLS certificate after infrastructure
-              changes because it covers multiple tenant and application hostnames.
+              The showcase depends on the <code>summit</code> issuer and dedicated namespace.
+              Infrastructure changes to other tenants should not affect either SSO app;
+              verify the shared TLS certificate after changes because it covers multiple
+              tenant and application hostnames.
             </p>
           </section>
 
